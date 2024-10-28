@@ -11,7 +11,7 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api', newsRoutes);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.APP_PORT || 5000;
 app.listen(PORT, async () => {
   try {
     await sequelize.authenticate();
